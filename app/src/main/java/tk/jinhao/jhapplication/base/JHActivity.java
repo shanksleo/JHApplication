@@ -1,14 +1,14 @@
 package tk.jinhao.jhapplication.base;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 /**
  * Created by shanks on 15/5/21.
  */
-public abstract class JHActivity extends Activity implements IEventHandler {
-
+public abstract class JHActivity extends AppCompatActivity implements IEventHandler {
+//    实际干活的那个小子
     private IEventHandler mIEventHandler;
 
     @Override
@@ -32,9 +32,9 @@ public abstract class JHActivity extends Activity implements IEventHandler {
 
     }
 
-    public static class Instance{
-       static JHActivityEventHandler jhActivityEventHandler = new JHActivityEventHandler();
-    }
+//    public static class Instance{
+//       static JHActivityEventHandler jhActivityEventHandler = new JHActivityEventHandler();
+//    }
 
   /*  public static IEventHandler  getInstace(){
         return Instance.jhActivityEventHandler;

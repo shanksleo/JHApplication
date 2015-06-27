@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">shanks</string>
+    <string name="action_settings">设置</string>
+    <string name="hello_world"> 你好,世界!</string>
+    <string name="open"> 打开</string>
+</resources>

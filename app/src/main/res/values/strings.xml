@@ -2,5 +2,14 @@
     <string name="app_name">JH Application</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">设置</string>
+    <string name="action_settings">setting</string>
+    <string name="open">open</string>
+    <string name="close">clos</string>
+    <array name="array_left_menu">
+        <item>我的大房</item>
+        <item>我的二房</item>
+        <item>我的小老婆</item>
+        <item>我的小小老婆</item>
+        <item>设置</item>
+    </array>
 </resources>

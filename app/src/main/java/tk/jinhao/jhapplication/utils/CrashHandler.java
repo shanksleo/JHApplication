@@ -4,6 +4,9 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Environment;
+import android.util.Log;
+
+import com.orhanobut.logger.Logger;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -49,11 +52,19 @@ public class CrashHandler implements UncaughtExceptionHandler {
 	 * 把异常信息写到sd卡
 	 * @param ex
 	 */
-	private void saveLog2SDcard(Throwable ex){
+	private void saveLog2SDcard(Throwable ex)  {
 		if(!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
 			return;
 		}
+
+//		Process p = Runtime.getRuntime().exec("mkdir" + filePath+context.getPackageName()+"/ErrorLog/");
+
 		File file = new File(filePath+context.getPackageName()+"/ErrorLog/");
+
+
+		Logger.e(file.getAbsolutePath());
+		Logger.e(filePath+context.getPackageName()+"/ErrorLog/");
+		Log.d("filepath",filePath+context.getPackageName()+"/ErrorLog/");
 		if(!file.exists()){
 			file.mkdirs();
 		}

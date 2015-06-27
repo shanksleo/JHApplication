@@ -9,7 +9,7 @@ import android.view.View;
 /**
  * Created by shanks on 15/5/21.
  */
-public class JHFragment extends Fragment implements IEventSender, IMessageHandler {
+public abstract class JHFragment extends Fragment implements IEventSender, IMessageHandler, IActivityMessagerHandler {
     private static final int SEND_TO_FRAGMENT = 0x001;
 
     private IEventHandler mEventHandler;
@@ -79,4 +79,9 @@ public class JHFragment extends Fragment implements IEventSender, IMessageHandle
                 break;
         }
     }
+
+    @Override
+    public abstract void handleActivityEvent(int eventType, int eventId, Bundle data);
+
+
 }

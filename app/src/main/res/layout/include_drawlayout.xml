@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/dl_left"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+    <!--主布局-->
+    <!-- 主内容区的布局代码要放在侧滑菜单布局的前面,这可以帮助DrawerLayout判断谁是侧滑菜单，谁是主内容区；
+    侧滑菜单的部分的布局（这里是ListView）可以设置layout_gravity属性，他表示侧滑菜单是在左边还是右边。-->
+    <FrameLayout
+        android:id="@+id/frame_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </FrameLayout>
+    <!--侧滑菜单-->
+    <!--侧滑菜单的宽度在这里修改 -->
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="?attr/colorPrimary"
+
+        >
+
+        <!--<com.facebook.drawee.view.SimpleDraweeView-->
+            <!--android:id="@+id/ivi_avatar"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_width="match_parent"-->
+            <!--fresco:placeholderImage="@mipmap/by_renamatui27"-->
+            <!--/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="姓名:小丽"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:text="年龄:26"
+            android:textSize="14sp"
+
+            />
+        <ListView
+            android:layout_marginTop="40dp"
+            android:id="@+id/lv_left_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:text="DrawerLayout"/>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
