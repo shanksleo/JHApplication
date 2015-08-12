@@ -1,4 +1,4 @@
-package tk.jinhao.jhapplication;
+package tk.jinhao.jhapplication.module.main;
 
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
@@ -11,18 +11,31 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import butterknife.ButterKnife;
+import butterknife.InjectView;
+import tk.jinhao.jhapplication.R;
 import tk.jinhao.jhapplication.base.IEventHandler;
 import tk.jinhao.jhapplication.base.JHActivity;
+import tk.jinhao.jhapplication.config.JHApplication;
+import tk.jinhao.jhapplication.fragment.Afragment;
 import tk.jinhao.jhapplication.utils.click.ClickCommonTool;
 import tk.jinhao.jhapplication.utils.click.ExitEvevtDispatch;
 
 
 public class MainActivity extends JHActivity {
+    @InjectView(R.id.tl_custom)
+    Toolbar mTlCustom;
+    @InjectView(R.id.frame_main)
+    FrameLayout mFrameMain;
+    @InjectView(R.id.lv_left_menu)
+    ListView mLvLeftMenu;
+    @InjectView(R.id.dl_left)
+    DrawerLayout mDlLeft;
 
 //
 //    @InjectView(R.id.ivi_avatar)
@@ -45,7 +58,12 @@ public class MainActivity extends JHActivity {
         ButterKnife.inject(this);
         initToolBar();
         initDrawerLayout();
+        Afragment afragment = new Afragment();
+        getFragmentManager().beginTransaction().add(R.id.frame_main,afragment,"ab").commitAllowingStateLoss();
     }
+
+
+
 
     @Override
     public IEventHandler getInstace() {
@@ -149,5 +167,10 @@ public class MainActivity extends JHActivity {
         }
 
         return super.dispatchKeyEvent(event);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

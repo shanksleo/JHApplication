@@ -1,4 +1,4 @@
-package tk.jinhao.jhapplication;
+package tk.jinhao.jhapplication.module.main;
 
 import android.os.Bundle;
 

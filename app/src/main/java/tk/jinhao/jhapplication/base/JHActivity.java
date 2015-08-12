@@ -11,6 +11,7 @@ public abstract class JHActivity extends AppCompatActivity implements IEventHand
 //    实际干活的那个小子
     private IEventHandler mIEventHandler;
 
+
     @Override
     public void handleFragmentEvent( int eventType, int eventId,Bundle data) {
         mIEventHandler.handleFragmentEvent(eventType,eventId,data);

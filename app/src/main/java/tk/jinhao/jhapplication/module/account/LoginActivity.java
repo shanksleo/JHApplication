@@ -1,4 +1,4 @@
-package tk.jinhao.jhapplication;
+package tk.jinhao.jhapplication.module.account;
 
 import android.app.Activity;
 import android.os.Bundle;

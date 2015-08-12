@@ -1,4 +1,4 @@
-package tk.jinhao.jhapplication;
+package tk.jinhao.jhapplication.module.launch;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,6 +12,8 @@ import android.widget.ImageView;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import tk.jinhao.jhapplication.module.main.MainActivity;
+import tk.jinhao.jhapplication.R;
 import tk.jinhao.jhapplication.utils.DB.SharedPreferencesUtils;
 
 /**
@@ -46,6 +48,8 @@ public class SplashActivity extends Activity {
         ButterKnife.inject(this);
         setAnimation();
         firstEntry = (boolean) SharedPreferencesUtils.get(this,FIRST_ENTRY,false);
+
+//        JHApplication.requestQueue
     }
 
     @Override

@@ -6,7 +6,7 @@ import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import tk.jinhao.jhapplication.JHApplication;
+import tk.jinhao.jhapplication.config.JHApplication;
 
 /**
  * Created by shanks on 15/6/26.

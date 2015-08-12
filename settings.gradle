@@ -1,1 +1,1 @@
-include ':app', ':jhlibrary'
+include ':app', ':jhlibrary', ':commentlib', ':volleyutils'

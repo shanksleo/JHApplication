@@ -32,6 +32,8 @@ public abstract class JHFragment extends Fragment implements IEventSender, IMess
         }
     }
 
+
+
     @Override
     public void onDestroy() {
         super.onDestroy();
