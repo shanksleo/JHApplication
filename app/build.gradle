@@ -31,4 +31,5 @@ dependencies {
     compile 'com.facebook.fresco:fresco:0.5.3+'
     compile project(':commentlib')
     compile project(':volleyutils')
+    compile 'com.android.support:design:22.2.0'
 }
